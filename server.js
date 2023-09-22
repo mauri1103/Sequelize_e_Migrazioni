@@ -22,6 +22,8 @@ const startServer = async () => {
     try {
         await dbConfig.connect();
         await dbConfig.syncDatabase();
+        // Routes
+        app.use('/api', require('./src/routes/main.routes'));
 
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
