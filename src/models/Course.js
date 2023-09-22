@@ -23,7 +23,11 @@ class Course extends Model {
             endDate: {
                 type: DataTypes.DATE,
                 allowNull: false
-            }
+            },
+            level: {
+                type: DataTypes.STRING,
+                allowNull: true
+            },
         }, {
             sequelize,
             modelName: 'Course',
